@@ -20,6 +20,7 @@ Route::resource('mahasiswa', MahasiswaController::class);
 Route::get('/cari', [MahasiswaController::class, 'cari'])->name('cari');
 
 Route::get('/mahasiswa/nilai/{mahasiswa}', [MahasiswaController::class, 'nilai'])->name('nilai');
+Route::get('mahasiswa/nilai/{mahasiswa}/cetak_khs', [MahasiswaController::class, 'cetak_khs'])->name('mahasiswa.cetak_khs');
 
 Route::get('/', function () {
     return view('welcome');
